@@ -4,6 +4,10 @@ import MessageService from "./message-service.js";
 let userId = "Conboul";
 const messageService = new MessageService(); //userId arg?
 
+document.getElementById("greeting").style.color = "tealback";
+
+
+
 window.addEventListener("load", function (){
     createFormListener();
     document.getElementById("greeting").innerHTML = `Welcome ${userId}`;
@@ -44,6 +48,8 @@ function createFormListener() {
         function successCallback(response) {
             // This data comes from the resolve method
             addMessageToThread(response);
+            document.getElementById("message-list").scrollTo(0,document.body.scrollHeight);
+
         }
 
         function errorCallback(response) {

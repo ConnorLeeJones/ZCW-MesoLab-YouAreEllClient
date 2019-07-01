@@ -19,8 +19,10 @@ header {
 
 header h1,
 header h2 {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 8em;
+    height: auto;
 }
 
 sidebar header.open {
